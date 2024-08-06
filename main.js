@@ -1,4 +1,4 @@
-
+        // PHASE ONE In JS FILE CALLED AS COLLECTION ELEMENT
         
         // now we needed to attached with slide number
         let imgs = document.querySelectorAll(".slider-container img");
