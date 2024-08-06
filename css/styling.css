@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slider-container {
+    position: relative;
+    margin: 10px auto;
+
+    width: 800px;
+    min-height: 250px;
+}
+
+.slider-container #slider-number {
+    background-color: #333;
+    color: white;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-transform: capitalize;
+
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    z-index: 5;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border: 1px solid #eee;
+}
+
+.slider-container img {
+    width: 800px;
+    height: 250px;
+    position: absolute;
+    opacity:0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+.slider-controls {
+    width: 800px;
+    overflow: hidden; /*to management the float ! */
+    margin: auto;
+}
+
+.slider-controls .pre,
+.slider-controls .next {
+    background-color: #05e0e0;
+    color: #333;
+    
+    border: 1px solid #444;
+    padding: 5px 10px;
+    
+    text-align: center;
+    text-transform: capitalize;
+    
+    font-size: 15px;
+    border-radius: 10px;
+
+    width: 20%;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.slider-controls .next:hover ,
+.slider-controls .pre:hover {
+    background-color: #05c6c6;
+}
+
+.slider-controls .pre {
+    float: left;
+}
+
+.slider-controls .next {
+    float: right;
+}
+
+/* class list operation's */
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-controls .next.disable,
+.slider-controls .pre.disable {
+
+    background-color: #50bdbd;
+    cursor: no-drop;
+    /* cursor: no-drop | x notation to avoid clicking to this element */
+}
+
+.slider-controls .indicator {
+    width: 60%;
+    float: left;
+}
+
+.slider-controls .indicator ul {
+    list-style: none;
+    text-align: center;
+}
+
+.slider-controls .indicator ul li {
+    display: inline-block;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 5px;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+.slider-controls .indicator ul li:hover{
+    background-color: #b9b7b7;
+    color: white;
+}
+
+.slider-controls .indicator ul li.active {
+    background-color: #05c6c6;
+    color: white;
+}
